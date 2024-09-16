@@ -68,7 +68,7 @@ int main() {
     }
   }
 
-  if (i == 9) {
+  if (n == 9) {
     // all cells with i=0 to 2 have been inputted above but no
     // winner yet
     cout << "Tie!" << endl;
