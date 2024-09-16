@@ -1,4 +1,8 @@
 
+#include <iostream>
+
+using namespace std;
+
 bool isWin(char game[3][3]) {
   bool win = false;
   if (game[0][0] == game[0][1] && game[0][1] == game[0][2] &&
@@ -41,8 +45,8 @@ int main() {
   bool turn = true;  // false for player 1's turn, true for player 2's turn.
   // Player 1 first.
   cout << "X = Player 1" << endl << "O = Player 2" << endl;
-
-  for (int n = 0; n < 9; n++) {
+  int n = 0;
+  for (n = 0; n < 9; n++) {
     turn = !turn;  // use the not-operator to change true to false or false to
                    // true.
     if (turn == false)
@@ -64,9 +68,11 @@ int main() {
     }
   }
 
-  if (i ==
-      3)  // all cells with i=0 to 2 have been inputted above but no winner yet
+  if (n == 9) {
+    // all cells with i=0 to 2 have been inputted above but no
+    // winner yet
     cout << "Tie!" << endl;
+  }
 
   // show the game to console
   cout << game[0][0] << " " << game[0][1] << " " << game[0][2] << endl;
